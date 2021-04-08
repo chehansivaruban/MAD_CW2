@@ -26,9 +26,9 @@
         android:layout_marginEnd="176dp"
         android:layout_marginRight="176dp"
         android:ems="10"
-        android:text="Movie Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt1"
+        android:hint="Enter Movie title"
         android:inputType="textAutoComplete"/>
 
     <TextView
@@ -51,7 +51,7 @@
         android:layout_marginRight="176dp"
         android:ems="10"
         android:inputType="number"
-        android:text="Year "
+        android:hint="Enter Year "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt2" />
 
@@ -75,7 +75,7 @@
         android:layout_marginRight="176dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Director"
+        android:hint="EnterDirector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt3" />
 
@@ -88,7 +88,7 @@
         android:layout_marginRight="184dp"
         android:ems="10"
         android:inputType="number"
-        android:text="Rating"
+        android:hint="Enter Rating"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt5" />
 
@@ -123,7 +123,7 @@
         android:layout_marginRight="180dp"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:text="Actors/Actresses"
+        android:hint="Actors/Actresses"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt4" />
 
@@ -136,7 +136,7 @@
         android:layout_marginRight="184dp"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:text="Review"
+        android:hint="Enter Review"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -161,7 +161,8 @@
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="save"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
