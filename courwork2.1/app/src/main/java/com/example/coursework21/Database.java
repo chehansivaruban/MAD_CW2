@@ -8,14 +8,19 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+
 public class Database extends SQLiteOpenHelper {
+
     public Database(Context context) {
         super(context, "moviedata.db",null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-       db.execSQL("create Table moviedata(title TEXT primary key, year TEXT, director TEXT, actors TEXT, rating TEXT, review TEXT)");
+        String createTable = "create Table moviedata" +
+                "(title TEXT primary key, year TEXT, director TEXT, actors TEXT, rating TEXT, review TEXT)";
+       db.execSQL(createTable);
 
     }
 
@@ -82,4 +87,16 @@ public class Database extends SQLiteOpenHelper {
         Cursor cursor = DB.rawQuery("Select * from moviedata",null);
        return cursor;
     }
+    public ArrayList getTitle(){
+    SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+    ArrayList<String> arrayList = new ArrayList<String>();
+        Cursor cursor = sqLiteDatabase.rawQuery("Select * from moviedata",null);
+        cursor.moveToFirst();
+        while (!(cursor.isAfterLast())){
+            arrayList.add(cursor.getString((cursor.getColumnIndex("title"))));
+            cursor.moveToNext();
+        }
+        return arrayList;
+    }
 }
+
