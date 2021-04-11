@@ -5,15 +5,17 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.SimpleCursorAdapter;
 
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
 public class Database extends SQLiteOpenHelper {
-
+    Context context;
     public Database(Context context) {
         super(context, "moviedata.db",null, 1);
+        this.context=context;
     }
 
     @Override
@@ -97,6 +99,18 @@ public class Database extends SQLiteOpenHelper {
             cursor.moveToNext();
         }
         return arrayList;
+    }
+    public SimpleCursorAdapter populateListViewFromDB(){
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("Select * from moviedata",null);
+        SimpleCursorAdapter tileAdapter = (SimpleCursorAdapter) cursor;
+        return tileAdapter;
+
+    }
+    public Cursor getTitleCursor(){
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor = DB.rawQuery("Select title from moviedata",null);
+        return cursor;
     }
 }
 

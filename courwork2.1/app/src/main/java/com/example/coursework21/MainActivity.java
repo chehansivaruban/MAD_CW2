@@ -27,4 +27,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void launchDisplay(View view) {
+        Log.d(LOG_TAG, "Button one clicked!"); //give log message
+        Intent intent = new Intent(this, DisplayMovie.class);
+        startActivity(intent);
+
+    }
 }

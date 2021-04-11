@@ -17,7 +17,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText rating;
     EditText review;
     Button save;
-    Database DB;
+    DatabaseHelper DB;
 
 
     @Override
@@ -31,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
         rating = findViewById(R.id.edit5);
         review = findViewById(R.id.edit6);
         save = findViewById(R.id.savebtn);
-        DB = new Database(this);
+        DB = new DatabaseHelper(this);
 
 
     }
@@ -45,7 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
         String reviewTxt = review.getText().toString();
         try{
         if((0<Integer.parseInt(ratingeTxt) && Integer.parseInt(ratingeTxt)<11) && (Integer.parseInt(yearTxt) > 1895)){
-            boolean checkinsertdata = DB.insertmoviedata(titleTxt, yearTxt, directorTxt, actTxt, ratingeTxt, reviewTxt);
+            boolean checkinsertdata = DB.addData(titleTxt, yearTxt, directorTxt, actTxt, ratingeTxt, reviewTxt);
             if (checkinsertdata == true) {
                 Toast.makeText(RegisterActivity.this, "Movie added", Toast.LENGTH_SHORT).show();
             } else {

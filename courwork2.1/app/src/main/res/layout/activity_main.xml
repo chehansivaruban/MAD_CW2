@@ -33,6 +33,7 @@
         android:layout_marginRight="197dp"
         android:layout_marginBottom="529dp"
         android:text="Display Movies"
+        android:onClick="launchDisplay"
         />
 
     <Button
