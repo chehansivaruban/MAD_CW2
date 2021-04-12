@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditorActivity">
+
+    <TextView
+        android:id="@+id/review_ee"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginRight="78dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/rating_e"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_e" />
+
+    <TextView
+        android:id="@+id/review_e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="183dp"
+        android:text="Review"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/title_ee"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <TextView
+        android:id="@+id/title_ee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toStartOf="@+id/year_e"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/director_ee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="42dp"
+        app:layout_constraintStart_toStartOf="@+id/title_ee"
+        app:layout_constraintTop_toBottomOf="@+id/title_ee" />
+
+    <TextView
+        android:id="@+id/year_e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:text="Year"
+        app:layout_constraintEnd_toStartOf="@+id/year_ee"
+        app:layout_constraintHorizontal_bias="0.771"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/act_e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text="Actors/Actresses"
+        app:layout_constraintStart_toStartOf="@+id/act_ee"
+        app:layout_constraintTop_toBottomOf="@+id/year_e" />
+
+    <TextView
+        android:id="@+id/year_ee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.778"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/director_e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginBottom="202dp"
+        android:text="Director"
+        app:layout_constraintBottom_toTopOf="@+id/edit_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/act_ee"
+        android:layout_width="160dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginRight="41dp"
+        android:layout_marginBottom="19dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/rating_e"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rating_e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="109dp"
+        android:layout_marginRight="109dp"
+        android:layout_marginBottom="495dp"
+        android:text="Rating"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/review_ee"
+        app:layout_constraintTop_toBottomOf="@+id/act_ee" />
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Edit Name"
+
+        app:layout_constraintBottom_toTopOf="@+id/edit_year"
+        app:layout_constraintEnd_toEndOf="@+id/review_ee"
+        app:layout_constraintStart_toStartOf="@+id/edit_year"
+        app:layout_constraintTop_toBottomOf="@+id/director_e" />
+
+    <EditText
+        android:id="@+id/edit_year"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Edit Year"
+        app:layout_constraintBottom_toTopOf="@+id/edit_director"
+        app:layout_constraintEnd_toEndOf="@+id/edit_review"
+        app:layout_constraintStart_toStartOf="@+id/edit_director"
+        app:layout_constraintTop_toBottomOf="@+id/edit_name" />
+
+    <EditText
+        android:id="@+id/edit_director"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Edit Director"
+        app:layout_constraintBottom_toTopOf="@+id/edit_act"
+        app:layout_constraintEnd_toEndOf="@+id/edit_act"
+        app:layout_constraintStart_toStartOf="@+id/edit_act"
+        app:layout_constraintTop_toBottomOf="@+id/edit_year" />
+
+    <EditText
+        android:id="@+id/edit_act"
+        android:layout_width="164dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Edit Act"
+        app:layout_constraintBottom_toTopOf="@+id/edit_review"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_director" />
+
+    <EditText
+        android:id="@+id/edit_review"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="100dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Edit Review"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edit_director"
+        app:layout_constraintStart_toStartOf="@+id/edit_act"
+        app:layout_constraintTop_toBottomOf="@+id/edit_act" />
+
+    <Button
+        android:id="@+id/update_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="13dp"
+        android:onClick="update"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edit_review" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

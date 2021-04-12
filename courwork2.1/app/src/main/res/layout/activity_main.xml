@@ -46,6 +46,7 @@
         android:layout_marginEnd="230dp"
         android:layout_marginRight="230dp"
         android:layout_marginBottom="436dp"
+        android:onClick="launchFav"
         android:text="Favourites" />
 
     <Button
@@ -58,6 +59,7 @@
         android:layout_marginEnd="237dp"
         android:layout_marginRight="237dp"
         android:layout_marginBottom="363dp"
+        android:onClick="launchEdit"
         android:text="Edit Movie" />
 
     <Button
@@ -70,6 +72,7 @@
         android:layout_marginEnd="269dp"
         android:layout_marginRight="269dp"
         android:layout_marginBottom="281dp"
+        android:onClick="launchSearch"
         android:text="Search" />
 
     <Button

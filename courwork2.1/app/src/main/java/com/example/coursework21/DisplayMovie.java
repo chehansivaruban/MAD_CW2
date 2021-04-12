@@ -45,6 +45,7 @@ public class DisplayMovie extends AppCompatActivity {
                 theList.add(data.getString(0));
 //                ListAdapter listAdapter = new ArrayAdapter<>(this,R.layout.single_item,R.id.list_item,theList);
                 ListAdapter listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice,theList);
+//                listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
                 listView.setAdapter(listAdapter);
             }
         }

@@ -28,9 +28,27 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void launchDisplay(View view) {
-        Log.d(LOG_TAG, "Button one clicked!"); //give log message
+        Log.d(LOG_TAG, "Button 2 clicked!"); //give log message
         Intent intent = new Intent(this, DisplayMovie.class);
         startActivity(intent);
 
+    }
+
+    public void launchFav(View view) {
+        Log.d(LOG_TAG, "Button 3 clicked!"); //give log message
+        Intent intent = new Intent(this, FavouriteActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchEdit(View view) {
+        Log.d(LOG_TAG, "Button 4 clicked!"); //give log message
+        Intent intent = new Intent(this, EditActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchSearch(View view) {
+        Log.d(LOG_TAG, "Button 5 clicked!"); //give log message
+        Intent intent = new Intent(this, SearchContainerActivity.class);
+        startActivity(intent);
     }
 }
