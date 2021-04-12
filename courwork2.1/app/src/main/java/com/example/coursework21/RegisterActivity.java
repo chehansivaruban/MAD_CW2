@@ -24,6 +24,11 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        try //hide the tittle bar
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
         title = findViewById(R.id.edit1);
         year = findViewById(R.id.edit2);
         director = findViewById(R.id.edit3);
@@ -47,7 +52,14 @@ public class RegisterActivity extends AppCompatActivity {
         if((0<Integer.parseInt(ratingeTxt) && Integer.parseInt(ratingeTxt)<11) && (Integer.parseInt(yearTxt) > 1895)){
             boolean checkinsertdata = DB.addData(titleTxt, yearTxt, directorTxt, actTxt, ratingeTxt, reviewTxt);
             if (checkinsertdata == true) {
-                Toast.makeText(RegisterActivity.this, "Movie added", Toast.LENGTH_SHORT).show();
+                title.setText("");
+                year.setText("");
+                director.setText("");
+                act.setText("");
+                rating.setText("");
+                review.setText("");
+                Toast.makeText(RegisterActivity.this, "Movie added ", Toast.LENGTH_LONG).show();
+
             } else {
                 Toast.makeText(RegisterActivity.this, "Movie not added", Toast.LENGTH_SHORT).show();
             }
@@ -57,7 +69,6 @@ public class RegisterActivity extends AppCompatActivity {
                 rating.setText("");
                 rating.setHint("Rating should be between 1 to 10");
                 rating.setHintTextColor(Color.RED);
-
                 Toast.makeText(RegisterActivity.this,"Input error",Toast.LENGTH_SHORT).show();
             }
             if (Integer.parseInt(yearTxt) < 1895) {
@@ -68,22 +79,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         }
         }catch (Exception e){
-
-//            if(0>Integer.parseInt(ratingeTxt) || Integer.parseInt(ratingeTxt)>11) {
-//                rating.setText("Rating should be between 1 to 10");
-//                rating.setTextColor(Color.RED);
-//                Toast.makeText(RegisterActivity.this,"Input error",Toast.LENGTH_SHORT).show();
-//            }
-//            if (Integer.parseInt(yearTxt) < 1895) {
-//
-//            year.setText("Enter an year after 1895");
-//            year.setTextColor(Color.RED);
             Toast.makeText(RegisterActivity.this,"Input error",Toast.LENGTH_SHORT).show();
-
-
-
-
-//        }
     }
         }
 

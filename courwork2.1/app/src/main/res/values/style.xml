@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/duskYellow</item>
+        <item name="colorControlActivated">@color/lightGrey</item>
+    </style>
+
+    <color name="duskYellow">#C2B1B0</color>
+    <color name="lightGrey">#FFEB3B</color>
+</resources>

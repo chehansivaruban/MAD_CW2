@@ -1,9 +1,12 @@
 package com.example.coursework21;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -20,6 +23,11 @@ public class FavouriteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favourite);
+        try //hide the tittle bar
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
 
         listView = (ListView) findViewById(R.id.favList);
         this.listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
@@ -42,4 +50,21 @@ public class FavouriteActivity extends AppCompatActivity {
         }
 
     }
+    public void remove(View view) {
+        System.out.println("click");
+        //int id = item.getItemId();
+        ArrayList<String> fav = new ArrayList<String>();
+
+            String itemselect = "selected items \n";
+            for(int i=0;i<listView.getCount();i++){
+                if(!(listView.isItemChecked(i))){
+                    itemselect+=listView.getItemAtPosition(i);
+                    fav.add(listView.getItemAtPosition(i).toString());
+                }
+            }
+            Toast.makeText(this, fav+"  Removed From Favourite",Toast.LENGTH_LONG).show();
+            myDB.removeFav(fav);
+    }
+
+
 }

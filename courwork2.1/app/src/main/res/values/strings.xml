@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Coursework2.1</string>
+    <string name="MovieGO">Movie Go</string>
+    <string name="register">Register Movie</string>
+    <string name="display">Display Movie</string>
+    <string name="favourite">Favourite</string>
+    <string name="edit">Edit</string>
+    <string name="search">Search</string>
+    <string name="rate">Rate</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="register_movie">Register Movie</string>
 </resources>

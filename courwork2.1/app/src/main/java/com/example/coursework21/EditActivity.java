@@ -23,7 +23,11 @@ public class EditActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
-
+        try //hide the tittle bar
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
 
         listView = (ListView) findViewById(R.id.editListView);
         myDB = new DatabaseHelper(this);

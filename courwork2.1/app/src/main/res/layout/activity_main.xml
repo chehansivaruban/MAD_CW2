@@ -4,86 +4,261 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-
+    android:background="@drawable/main_background"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <Button
-        android:id="@+id/btn1"
+    <TextView
+        android:id="@+id/menu_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="196dp"
-        android:layout_marginRight="196dp"
-        android:layout_marginBottom="619dp"
-        android:text="Register Movie"
-        android:onClick="launchRegister"/>
-
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="197dp"
-        android:layout_marginRight="197dp"
-        android:layout_marginBottom="529dp"
-        android:text="Display Movies"
-        android:onClick="launchDisplay"
+        android:text="@string/MovieGO"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="44sp"
+        android:layout_marginTop="12dp"
         />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/menu_title"
+        android:rowCount="3"
+        android:columnCount="2"
+        android:layout_margin="20dp">
 
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="230dp"
-        android:layout_marginRight="230dp"
-        android:layout_marginBottom="436dp"
-        android:onClick="launchFav"
-        android:text="Favourites" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/make_btn"
+            android:layout_width="wrap_content"
+            app:cardBackgroundColor="#000000"
+            android:onClick="launchRegister"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="15dp"
+            android:elevation="8dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical|center_horizontal">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="237dp"
-        android:layout_marginRight="237dp"
-        android:layout_marginBottom="363dp"
-        android:onClick="launchEdit"
-        android:text="Edit Movie" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="99dp"
+                    android:src="@drawable/ic_baseline_movie_filter_24" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="@string/register"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="269dp"
-        android:layout_marginRight="269dp"
-        android:layout_marginBottom="281dp"
-        android:onClick="launchSearch"
-        android:text="Search" />
+            android:id="@+id/image_btn"
+            android:onClick="launchDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#000000"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="15dp"
+            android:elevation="8dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground">
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="264dp"
-        android:layout_marginRight="264dp"
-        android:layout_marginBottom="190dp"
-        android:text="Ratings" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical|center_horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="98dp"
+                    android:src="@drawable/ic_baseline_slideshow_24" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="@string/display"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/hint_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="launchFav"
+            app:cardBackgroundColor="#000000"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="15dp"
+            android:elevation="8dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="launchFav"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical|center_horizontal">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_baseline_favorite_24"/>
+
+                <TextView
+                    android:layout_width="111dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/favourite"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/advance_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            app:cardBackgroundColor="#000000"
+            android:onClick="launchEdit"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="15dp"
+            android:elevation="8dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="94dp"
+                android:layout_height="88dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_baseline_edit_24" />
+
+                <TextView
+                    android:layout_width="111dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            app:cardBackgroundColor="#000000"
+            android:onClick="launchSearch"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="15dp"
+            android:elevation="8dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="94dp"
+                android:layout_height="88dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_baseline_search_24" />
+
+                <TextView
+                    android:layout_width="111dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="1"
+            app:cardBackgroundColor="#000000"
+            android:onClick="launchSearch"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="15dp"
+            android:elevation="8dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="94dp"
+                android:layout_height="88dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_baseline_rate_review_24" />
+
+                <TextView
+                    android:layout_width="111dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rate"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
 </RelativeLayout>

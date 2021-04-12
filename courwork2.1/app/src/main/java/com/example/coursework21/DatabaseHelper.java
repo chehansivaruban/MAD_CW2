@@ -194,5 +194,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return result;
     }
+    public void removeFav(ArrayList<String> fav){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("favourite", 0);
+        for (String s:fav){
+            Cursor data = db.rawQuery("Select * from mylist_data where title = ?", new String[]{s});
+//            long result = db.update(TABLE_NAME,  contentValues,"title =?", new String[]{s});
+            if (data.getCount() > 0) {
+                long result = db.update("mylist_data", contentValues, "title=?", new String[]{s});
+                if (result == -1) {
+                    System.out.println("error 1");
+                } else {
+
+                    System.out.println("done");
+                }
+            } else {
+                System.out.println("error");
+            }
+            // System.out.println(s);
+
+        }
+
+    }
 
 }

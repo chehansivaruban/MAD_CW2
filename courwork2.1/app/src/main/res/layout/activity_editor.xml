@@ -8,48 +8,50 @@
 
     <TextView
         android:id="@+id/review_ee"
-        android:layout_width="0dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="78dp"
-        android:layout_marginRight="78dp"
+        android:layout_width="123dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="36dp"
         android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/rating_e"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/review_e" />
+        app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+        app:layout_constraintStart_toStartOf="@+id/ratingBar"
+        app:layout_constraintTop_toTopOf="@+id/review_e" />
 
     <TextView
         android:id="@+id/review_e"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="183dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="31dp"
         android:text="Review"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/director_e" />
 
     <TextView
         android:id="@+id/title_e"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="35dp"
         android:text="Title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/title_ee"
-        app:layout_constraintHorizontal_bias="0.441"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/title_ee"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="97dp"
+        android:layout_marginLeft="97dp"
         android:layout_marginTop="35dp"
-        app:layout_constraintEnd_toStartOf="@+id/year_e"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="97dp"
+        android:layout_marginRight="97dp"
+        app:layout_constraintEnd_toStartOf="@+id/act_e"
+        app:layout_constraintStart_toStartOf="@+id/director_e"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -58,26 +60,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="42dp"
-        app:layout_constraintStart_toStartOf="@+id/title_ee"
-        app:layout_constraintTop_toBottomOf="@+id/title_ee" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/director_e"
+        app:layout_constraintStart_toStartOf="@+id/title_ee" />
 
     <TextView
         android:id="@+id/year_e"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="35dp"
         android:text="Year"
-        app:layout_constraintEnd_toStartOf="@+id/year_ee"
-        app:layout_constraintHorizontal_bias="0.771"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/act_e"
+        app:layout_constraintStart_toStartOf="@+id/act_e"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/act_e"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="37dp"
         android:text="Actors/Actresses"
         app:layout_constraintStart_toStartOf="@+id/act_ee"
         app:layout_constraintTop_toBottomOf="@+id/year_e" />
@@ -86,132 +86,160 @@
         android:id="@+id/year_ee"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.778"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toEndOf="@+id/year_e"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/director_e"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginBottom="202dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="95dp"
         android:text="Director"
-        app:layout_constraintBottom_toTopOf="@+id/edit_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/act_ee"
         android:layout_width="160dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="124dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="41dp"
         android:layout_marginRight="41dp"
-        android:layout_marginBottom="19dp"
+        android:layout_marginBottom="38dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/rating_e"
+        app:layout_constraintBottom_toBottomOf="@+id/rating_e"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/act_e" />
 
     <TextView
         android:id="@+id/rating_e"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="109dp"
-        android:layout_marginRight="109dp"
-        android:layout_marginBottom="495dp"
+        android:layout_marginTop="216dp"
         android:text="Rating"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/review_ee"
-        app:layout_constraintTop_toBottomOf="@+id/act_ee" />
+        app:layout_constraintEnd_toEndOf="@+id/act_ee"
+        app:layout_constraintStart_toStartOf="@+id/act_ee"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edit_name"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginBottom="19dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Edit Name"
+        android:layout_height="46dp"
 
-        app:layout_constraintBottom_toTopOf="@+id/edit_year"
-        app:layout_constraintEnd_toEndOf="@+id/review_ee"
-        app:layout_constraintStart_toStartOf="@+id/edit_year"
-        app:layout_constraintTop_toBottomOf="@+id/director_e" />
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="53dp"
+        android:ems="10"
+        android:hint="Edit Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edit_director"
+        app:layout_constraintEnd_toEndOf="@+id/edit_director"
+        app:layout_constraintStart_toStartOf="@+id/review_ee"
+        app:layout_constraintTop_toBottomOf="@+id/rating_e" />
 
     <EditText
         android:id="@+id/edit_year"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="23dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Edit Year"
-        app:layout_constraintBottom_toTopOf="@+id/edit_director"
-        app:layout_constraintEnd_toEndOf="@+id/edit_review"
-        app:layout_constraintStart_toStartOf="@+id/edit_director"
-        app:layout_constraintTop_toBottomOf="@+id/edit_name" />
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edit_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edit_director"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="14dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="189dp"
+        android:layout_marginBottom="189dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Edit Director"
-        app:layout_constraintBottom_toTopOf="@+id/edit_act"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingBar2"
         app:layout_constraintEnd_toEndOf="@+id/edit_act"
         app:layout_constraintStart_toStartOf="@+id/edit_act"
-        app:layout_constraintTop_toBottomOf="@+id/edit_year" />
+        app:layout_constraintTop_toBottomOf="@+id/act_ee" />
 
     <EditText
         android:id="@+id/edit_act"
-        android:layout_width="164dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginBottom="29dp"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginBottom="56dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Edit Act"
-        app:layout_constraintBottom_toTopOf="@+id/edit_review"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_director" />
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_review"
+        app:layout_constraintEnd_toEndOf="@+id/edit_review"
+        app:layout_constraintStart_toStartOf="@+id/edit_review"
+        app:layout_constraintTop_toBottomOf="@+id/edit_year" />
 
     <EditText
         android:id="@+id/edit_review"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginBottom="100dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="34dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Edit Review"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/edit_director"
-        app:layout_constraintStart_toStartOf="@+id/edit_act"
-        app:layout_constraintTop_toBottomOf="@+id/edit_act" />
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBar2"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/update_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginRight="85dp"
         android:layout_marginBottom="13dp"
         android:onClick="update"
         android:text="Update"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/edit_review" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="475dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="16dp"
+        android:numStars="10"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:stepSize="1"
+        android:theme="@style/RatingBar"
+        app:layout_constraintBottom_toTopOf="@+id/edit_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rating_e" />
+
+    <RatingBar
+        android:id="@+id/ratingBar2"
+        android:layout_width="469dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginRight="57dp"
+        android:layout_marginBottom="110dp"
+        android:numStars="10"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:stepSize="1"
+        android:theme="@style/RatingBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ratingBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

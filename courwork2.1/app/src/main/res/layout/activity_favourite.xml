@@ -1,15 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
 
     <ListView
         android:id="@+id/favList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:choiceMode="multipleChoice" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="58dp"
+        android:choiceMode="multipleChoice"
+        app:layout_constraintBottom_toTopOf="@+id/remove_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ListView>
 
+    <Button
+        android:id="@+id/remove_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
 
+        android:layout_marginStart="136dp"
 
+        android:layout_marginLeft="136dp"
+        android:layout_marginBottom="138dp"
+        android:background="@color/black"
+        android:elevation="8dp"
+        android:onClick="remove"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/favList"
+        app:layout_constraintTop_toBottomOf="@+id/favList" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

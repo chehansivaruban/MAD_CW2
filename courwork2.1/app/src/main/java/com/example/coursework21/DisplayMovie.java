@@ -17,6 +17,7 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class DisplayMovie extends AppCompatActivity {
 
@@ -35,14 +36,16 @@ public class DisplayMovie extends AppCompatActivity {
 
         myDB = new DatabaseHelper(this);
 
-        //populate an ArrayList<String> from the database and then view it
+
         ArrayList<String> theList = new ArrayList<>();
         Cursor data = myDB.getListContents();
         if(data.getCount() == 0){
             Toast.makeText(this, "There are no contents in this list!",Toast.LENGTH_LONG).show();
         }else{
+
             while(data.moveToNext()){
                 theList.add(data.getString(0));
+                Collections.sort(theList);
 //                ListAdapter listAdapter = new ArrayAdapter<>(this,R.layout.single_item,R.id.list_item,theList);
                 ListAdapter listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice,theList);
 //                listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
@@ -72,8 +75,7 @@ public class DisplayMovie extends AppCompatActivity {
                     fav.add(listView.getItemAtPosition(i).toString());
                 }
             }
-            System.out.println(itemselect);
-            System.out.println(fav);
+            Toast.makeText(this, fav+"  Added to Favourite",Toast.LENGTH_LONG).show();
             myDB.addFav(fav);
 
 

@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListAdapter;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ public class EditorActivity extends AppCompatActivity {
     EditText yearEdit;
     EditText directorEdit;
     EditText actEdit;
+    EditText rateEdit;
     //EditText ratingEdit;
     EditText reviewEdit;
     DatabaseHelper myDB;
@@ -38,11 +40,17 @@ public class EditorActivity extends AppCompatActivity {
     String rateStr;
     String reviewStr;
     String titleStr;
+    RatingBar ratebar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editor);
+        try //hide the tittle bar
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
         ArrayList<String> theList = new ArrayList<>();
         myDB = new DatabaseHelper(this);
 
@@ -54,11 +62,14 @@ public class EditorActivity extends AppCompatActivity {
         director = findViewById(R.id.director_ee);
         act = findViewById(R.id.act_ee);
         review = findViewById(R.id.review_ee);
+        ratebar = findViewById(R.id.ratingBar);
+
 
         titleEdit = findViewById(R.id.edit_name);
         yearEdit = findViewById(R.id.edit_year);
         directorEdit = findViewById(R.id.edit_director);
         actEdit = findViewById(R.id.edit_act);
+       // rateEdit = findViewById(R.id.edit_rate);
 
 
        // titleE.setText(title);
@@ -77,6 +88,11 @@ public class EditorActivity extends AppCompatActivity {
                 director.setText(data.getString(2));
                 act.setText(data.getString(3));
                 review.setText(data.getString(5));
+                rateStr = data.getString(4);
+                ratebar.setRating(Integer.parseInt(data.getString(4)));
+
+
+
             }
 
         }
@@ -88,6 +104,7 @@ public class EditorActivity extends AppCompatActivity {
         String newDirector = directorEdit.getText().toString();
         String newYear = yearEdit.getText().toString();
         String newAct = actEdit.getText().toString();
+        String newRate = String.valueOf(ratebar.getNumStars());
         String updateTitle = null;
         String updateYear = null;
         String updateDirector = null;
@@ -105,7 +122,6 @@ public class EditorActivity extends AppCompatActivity {
         if (!(newDirector.equals(""))){
             updateDirector= newTitle;
         }else {
-
                 updateDirector = directorStr;
 
         }
@@ -113,12 +129,22 @@ public class EditorActivity extends AppCompatActivity {
         if (!(newYear.equals(""))){
             updateYear= newTitle;
         }else {
-
                 updateYear = yearStr;
-
         }
+        if (!(newAct.equals(""))){
+            updateAct = newAct;
+        }else {
             updateAct = actStr;
-            updateRating = rateStr;
+        }
+
+
+        if (!(newRate==null)){
+            updateRating = newRate;
+        }else {
+            updateAct = rateStr;
+        }
+
+
             updateReview =reviewStr;
 
 
