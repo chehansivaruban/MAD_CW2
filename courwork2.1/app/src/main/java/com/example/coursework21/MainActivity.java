@@ -51,4 +51,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SearchContainerActivity.class);
         startActivity(intent);
     }
+
+    public void launchRate(View view) {
+        Log.d(LOG_TAG, "Button 6 clicked!"); //give log message
+        Intent intent = new Intent(this, RateActivity.class);
+        startActivity(intent);
+    }
 }

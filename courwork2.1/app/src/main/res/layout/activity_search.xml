@@ -14,16 +14,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
+
         <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
             android:id="@+id/title"
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:gravity="center_vertical"
-            android:textAllCaps="true"
-            android:textStyle="bold"
             android:text="text test"
-            />
+            android:textAllCaps="true"
+            android:textStyle="bold" />
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
@@ -39,34 +39,90 @@
             android:layout_marginTop="14dp"
             android:layout_marginRight="20dp"
             >
+            <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/l9"
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="20dp"
+            >
         <TextView
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:id="@+id/year"
+            android:id="@+id/yeartxt"
             android:layout_marginLeft="10dp"
             android:gravity="center_vertical"
             android:textStyle="bold"
-            android:text="year test"
+            android:text="Year  : "
+            />
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/year"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:text="year test"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/l10"
+                android:orientation="horizontal"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="20dp"
+                >
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/directortxt"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:text="Director : "
             />
 
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/director"
-            android:layout_marginLeft="10dp"
-            android:gravity="center_vertical"
-            android:textStyle="bold"
-            android:text="Director test"
-            />
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/director"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:text="Direct_set"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/l11"
+                android:orientation="horizontal"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="20dp"
+                >
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:id="@+id/act"
+                android:id="@+id/actTxt"
                 android:layout_marginLeft="10dp"
                 android:gravity="center_vertical"
                 android:textStyle="bold"
-                android:text="act test"
+                android:text="Actors : "
                 />
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/act"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:text="act_set"
+                    />
+            </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_height="wrap_content"
@@ -75,16 +131,43 @@
             android:orientation="vertical"
             android:layout_marginTop="14dp"
             >
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/l21"
+                android:orientation="horizontal"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="20dp"
+                >
+
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:id="@+id/rate"
+                android:id="@+id/ratetxt"
                 android:layout_marginLeft="10dp"
                 android:gravity="center_vertical"
                 android:textStyle="bold"
-                android:text="year test"
+                android:text="Rate : "
                 />
-
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/rate"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:text=" "
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/reviewtxt"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:text="Review : "
+                />
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
@@ -92,8 +175,18 @@
                 android:layout_marginLeft="10dp"
                 android:gravity="center_vertical"
                 android:textStyle="bold"
-                android:text="Director test"
+                android:text=" "
                 />
+            <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/fav"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:text="  "
+            />
+
         </LinearLayout>
     </LinearLayout>
 

@@ -90,9 +90,6 @@ public class EditorActivity extends AppCompatActivity {
                 review.setText(data.getString(5));
                 rateStr = data.getString(4);
                 ratebar.setRating(Integer.parseInt(data.getString(4)));
-
-
-
             }
 
         }

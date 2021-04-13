@@ -13,7 +13,7 @@ import java.util.List;
 
 class SearchViewHolder extends RecyclerView.ViewHolder{
 
-        public TextView title, year, director, act, rate, review;
+        public TextView title, year, director, act, rate, review ,fav;
     public SearchViewHolder(View itemView){
         super(itemView);
         title = (TextView)itemView.findViewById(R.id.title);
@@ -22,6 +22,7 @@ class SearchViewHolder extends RecyclerView.ViewHolder{
         act = (TextView)itemView.findViewById(R.id.act);
         rate = (TextView)itemView.findViewById(R.id.rate);
         review = (TextView)itemView.findViewById(R.id.review);
+        fav = (TextView)itemView.findViewById(R.id.fav);
 
     }
 }
@@ -52,6 +53,10 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder> {
         holder.act.setText(movies.get(position).getAct());
         holder.rate.setText(movies.get(position).getRate());
         holder.review.setText(movies.get(position).getReview());
+        if(movies.get(position).getFavourite().equals(1)){
+        holder.fav.setText("Favourite");
+                }
+
     }
 
     @Override

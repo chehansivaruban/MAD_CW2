@@ -85,6 +85,7 @@ public class SearchContainerActivity extends AppCompatActivity {
 
     private void startSearch(String text) {
         adapter = new SearchAdapter(this,myDB.getMovieByName(text));
+
         recyclerView.setAdapter(adapter);
     }
 

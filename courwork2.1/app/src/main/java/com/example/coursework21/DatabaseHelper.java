@@ -191,7 +191,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 m.setFavourite(cursor.getString(6));
                 result.add(m);
             }while (cursor.moveToNext());
+        }if (result.isEmpty()){
+            if(cursor.moveToFirst()){
+                do {
+                    Movie m = new Movie();
+                    m.setTitle(cursor.getString(0));
+                    m.setYear(cursor.getString(1));
+                    m.setDirector(cursor.getString(2));
+                    m.setAct(cursor.getString(3));
+                    m.setRate(cursor.getString(4));
+                    m.setReview(cursor.getString(5));
+                    m.setFavourite(cursor.getString(6));
+                    result.add(m);
+                }while (cursor.moveToNext());
+            }
+
         }
+        System.out.println(result);
         return result;
     }
     public void removeFav(ArrayList<String> fav){
@@ -217,5 +233,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
     }
+
 
 }
